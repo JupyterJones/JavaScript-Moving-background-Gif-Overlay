@@ -1,0 +1,59 @@
+﻿[Script Info]
+; Script written by Jack Northrup
+; http://www.mylinuxtoybox.com/
+Title: My Linux Tobox ASS file
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: PC.601
+PlayResX: 1280
+PlayResY: 720
+
+[My Linux Toy Box Project Information]
+Audio File: /home/jack/Desktop/ScreenCaptures/JavaScript-Moving-background-Gif-Overlay-folder/JavaScript-Moving-background-Gif-Overlay2.mkv
+Video File: /home/jack/Desktop/ScreenCaptures/JavaScript-Moving-background-Gif-Overlay-folder/JavaScript-Moving-background-Gif-Overlay2.mkv
+Video AR Mode: 4
+Video AR Value: 1.777778
+Video Zoom Percent: 0.500000
+Scroll Position: 16
+Active Line: 23
+Video Position: 2250
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,35,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:05.00,Default,,0,0,0,,Welcome
+Dialogue: 0,0:00:05.00,0:00:09.00,Default,,0,0,0,,This is one of many videos I will post that demonstrate video creation techniques.
+Dialogue: 0,0:00:09.00,0:00:13.00,Default,,0,0,0,,The video effects are all created with FFmpeg and JavaScript.
+Dialogue: 0,0:00:13.00,0:00:17.00,Default,,0,0,0,,The actual creations are often screen captures using FFmpeg.
+Dialogue: 0,0:00:17.00,0:00:21.00,Default,,0,0,0,,Gimp or Krita are used to process images.
+Dialogue: 0,0:00:21.00,0:00:25.00,Default,,0,0,0,,Both are FREE and open source programs as is FFmpeg.
+Dialogue: 0,0:00:25.00,0:00:29.00,Default,,0,0,0,,I am a Linux user, however FFmpeg, Gimp and Krita work on Windows also.
+Dialogue: 0,0:00:29.00,0:00:33.00,Default,,0,0,0,,Github/jupyterjones, mylinuxtoybox.com, GoogleDrive will all be used,
+Dialogue: 0,0:00:33.00,0:00:37.00,Default,,0,0,0,,to make the various source code for the video projects available.
+Dialogue: 0,0:00:37.00,0:00:41.00,Default,,0,0,0,,There also will be FREE suites available that can be used for your video creation.
+Dialogue: 0,0:00:41.00,0:00:45.00,Default,,0,0,0,,Quite often scripts can be reused, by only changing videos names and timing.
+Dialogue: 0,0:00:45.00,0:00:49.00,Default,,0,0,0,,It is my wish that this YouTube Channel and my website
+Dialogue: 0,0:00:49.00,0:00:53.00,Default,,0,0,0,,will become an interactive experience with subscribers.
+Dialogue: 0,0:00:53.00,0:00:57.00,Default,,0,0,0,,Videos posted will cover a range of computer languages and skills.
+Dialogue: 0,0:00:57.00,0:01:01.00,Default,,0,0,0,,Many videos will be screen captures of coding hints and ideas.
+Dialogue: 0,0:01:01.00,0:01:05.00,Default,,0,0,0,,Basically, me playing on my computer.
+Dialogue: 0,0:01:05.00,0:01:14.00,Default,,0,0,0,,I used the MyLinuxToyBox because I did not want to provide structured lessons. 
+Dialogue: 0,0:01:14.00,0:01:18.00,Default,,0,0,0,,I plan on recording my activities with HTML, CSS, JavaScript, Python
+Dialogue: 0,0:01:18.00,0:01:22.00,Default,,0,0,0,,Ruby, VPS services, SSH, FFmpeg, Flask, SQL and SQLite3
+Dialogue: 0,0:01:22.00,0:01:26.00,Default,,0,0,0,,Bash Scripting, Docker, Artificial intelligence just to name
+Dialogue: 0,0:01:26.00,0:01:30.00,Default,,0,0,0,,a few computer activities.
+Dialogue: 0,0:01:30.00,0:01:38.00,Default,,0,0,0,,I love Jupyter Notebooks
+Dialogue: 0,0:01:38.00,0:01:42.00,Default,,0,0,0,,Jupyter Notebooks have a multitude of uses
+Dialogue: 0,0:01:42.00,0:01:46.00,Default,,0,0,0,,I do not only use them to test and run Python code
+Dialogue: 0,0:01:46.00,0:01:50.00,Default,,0,0,0,,I also use them as a text editor, image editor, to run JavaScript
+Dialogue: 0,0:01:50.00,0:01:54.00,Default,,0,0,0,,I use them to access and edit SQLLite3 ad Mongo Databases.
+Dialogue: 0,0:01:54.00,0:01:58.00,Default,,0,0,0,,There is so much to show I get excited to think about it.
+Dialogue: 0,0:01:58.00,0:02:02.00,Default,,0,0,0,,I wish to share what I have learned and waht I am learning at this time.
+Dialogue: 0,0:02:02.00,0:02:06.00,Default,,0,0,0,,YouTube and my website are the best tools to do this.
+Dialogue: 0,0:02:06.00,0:02:10.00,Default,,0,0,0,,To Non-Linux users I will show the the easiest ans safest way to
+Dialogue: 0,0:02:10.00,0:02:14.00,Default,,0,0,0,,play with Linux.
+Dialogue: 0,0:02:14.00,0:05:50.00,Default,,0,0,0,,Subscribe and PLAY WITH ME.

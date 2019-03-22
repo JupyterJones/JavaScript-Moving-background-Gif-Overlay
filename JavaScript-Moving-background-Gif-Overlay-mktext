@@ -1,0 +1,15 @@
+convert -size 1280x2700 -background White -fill DarkRed -font LMMono9-Regular -density 120 \
+-pointsize 14 -gravity Center caption:@ALL-SCRIPTS-TOGETHER.txt \
+images/fade-image01.jpg
+ffmpeg -hide_banner -i images/fade-image01.jpg \
+-vf "drawtext=text='My Linux Toy Box':fontcolor=red:fontsize=35:x=510:y=55" \
+-y images/fade-image02.jpg 
+ffmpeg -hide_banner -i images/fade-image02.jpg \
+-vf "drawtext=text='Using bots and automation':fontcolor=red:fontsize=30:x=435:y=90" \
+-y images/fade-image03.jpg
+ffmpeg -hide_banner -i images/fade-image03.jpg \
+-vf "drawtext=text='How this can be done will':fontcolor=red:fontsize=30:x=425:y=2500" \
+-y images/fade-image04.jpg
+ffmpeg -hide_banner -i images/fade-image04.jpg \
+-vf "drawtext=text='be future video topics.':fontcolor=red:fontsize=30:x=425:y=2600" \
+-y images/fade-image-output.jpg

@@ -1,0 +1,84 @@
+convert -size 720x4500 -background White -fill DarkRed -font LMMono9-Regular -density 120 \
+-pointsize 26 -gravity Center caption:@ALL-Scripts-Together \
+images/fade-image11.jpg
+ffmpeg -hide_banner -i images/fade-image11.jpg \
+-vf "drawtext=text='My Linux Toy Box':fontcolor=red:fontsize=35:x=210:y=10" \
+-y images/fade-image11a.jpg 
+ffmpeg -hide_banner -i images/fade-image11a.jpg \
+-vf "drawtext=text='Using bots and automation':fontcolor=red:fontsize=30:x=155:y=80" \
+-y images/fade-image11b.jpg
+ffmpeg -hide_banner -i images/fade-image11b.jpg \
+-vf "drawtext=text='How this can be done will':fontcolor=red:fontsize=30:x=125:y=4380" \
+-y images/fade-image11c.jpg
+ffmpeg -hide_banner -i images/fade-image11c.jpg \
+-vf "drawtext=text='be future video topics.':fontcolor=red:fontsize=30:x=125:y=4410" \
+-y images/fade-image11d.jpg
+
+# makes a long image into a scrolling video
+ffmpeg -hide_banner -loop 1 -i images/fade-image11d.jpg \
+-f lavfi -i anullsrc=channel_layout=stereo:sample_rate=44100 \
+-vf "crop=h=720:w=iw:x=0:y='(ih-720)*t/500'" -r 25 -pix_fmt yuv420p \
+-t 500 -y Scrolled-Text-null-sound-500.mkv
+
+# resized the video with best resize settings 
+ffmpeg -hide_banner \
+-i Scrolled-Text-null-sound-500.mkv \
+-vf scale=540x540 \
+-c:v libx264 -preset veryslow \
+-profile:v main -crf 18 \
+-c:a copy -y Scrolled-Text-640.mkv
+
+ffmpeg -i /home/jack/Desktop/ScreenCaptures/gofish.mp4 \
+-y /home/jack/Desktop/ScreenCaptures/gofish.ts
+
+ffmpeg -i background.mkv -i /home/jack/Desktop/ScreenCaptures/gofish.ts \
+-filter_complex "[0:v][1:v]overlay=50:50[out]" \
+-map "[out]" \
+-metadata comment="Created for: Youtube MyLinuxToyBox" \
+-metadata filename="JavaScript-Moving-background-Gif-Overlay.mp4" \
+-metadata title="JavaScript-Moving-background-Gif-Overlay" \
+-metadata creator="Jack Northrup" \
+-metadata comment="Created for: Youtube MyLinuxToyBox" \
+-metadata handler_name="ISO Media file produced by Jack Northrup Tue Mar 19 09:03:00 PST 2019" \
+-c:a copy -t 300 -y JavaScript-Moving-background-Gif-Overlay.mp4
+
+ffmpeg -i background.mkv -i Images-posted-to-twitter-2017-2018-by-jack-northrup-with-meta.ts \
+-filter_complex "[0:v][1:v]overlay=0:0[out]" \
+-map "[out]" \
+-metadata comment="Created for: Youtube MyLinuxToyBox" \
+-metadata filename="FFmpeg-Tutorial-Using-Jupyter-Notebook-to-Create-Youtube-Videos.mkv" \
+-metadata title="FFmpeg-Tutorial-Using-Jupyter-Notebook-to-Create-Youtube-Videos" \
+-metadata creator="Jack Northrup" \
+-metadata comment="Created for: Youtube MyLinuxToyBox" \
+-metadata handler_name="ISO Media file produced by Jack Northrup Tue Mar 21 09:13:02 PST 2019" \
+-c:a copy -y Twitter-slide.mp4
+
+
+#overlays the scrolled text on the instagram
+ffmpeg -i Twitter-slide.mp4 -i Scrolled-Text-640.mkv \
+-filter_complex "[0:v][1:v]overlay=730:150[out]" \
+-map "[out]" \
+-metadata comment="Created for: Youtube MyLinuxToyBox" \
+-metadata filename="Convert-Instagram-Images-to-Video-With-Scrolling-Text.mkv" \
+-metadata title="Convert-Instagram-Images-to-Video-With-Scrolling-Text" \
+-metadata creator="Jack Northrup" \
+-metadata comment="Created for: Youtube MyLinuxToyBox" \
+-metadata handler_name="ISO Media file produced by Jack Northrup Tue Mar 19 09:03:00 PST 2019" \
+-c:a copy -t 514 -y Convert-Instagram-Images-to-Video-With-Scrolling-nosound.mkv
+
+ffmpeg -i music/CambodianOdyssey.mp3 -i music/river-fire-by-kevin-macleod.mp3 \
+-filter_complex [0:a][1:a]concat=n=2:v=0:a=1 music/2out.mp3
+
+ffmpeg -i Convert-Instagram-Images-to-Video-With-Scrolling-nosound.mkv \
+-i music/2out.mp3 \
+-c copy -map 0:0 -map 1:0 -shortest -t 514 \
+-y Convert-Instagram-Images-to-Video-With-Scrolling-Text.mkv
+
+Credit for the background music goes to :
+Cambodian Odyssey Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Music from https://filmmusic.io:
+"River Fire" by Kevin MacLeod (https://incompetech.com)
+Licence: CC BY (http://creativecommons.org/licenses/by/4.0/)

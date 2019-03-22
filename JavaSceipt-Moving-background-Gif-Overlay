@@ -1,0 +1,13 @@
+
+ffmpeg -i /home/jack/Desktop/ScreenCaptures/gofish.mp4 /home/jack/Desktop/ScreenCaptures/gofish.ts
+
+ffmpeg -i background.mkv -i /home/jack/Desktop/ScreenCaptures/gofish.ts \
+-filter_complex "[0:v][1:v]overlay=50:50[out]" \
+-map "[out]" \
+-metadata comment="Created for: Youtube MyLinuxToyBox" \
+-metadata filename="JavaScript-Moving-background-Gif-Overlay.mp4" \
+-metadata title="JavaScript-Moving-background-Gif-Overlay" \
+-metadata creator="Jack Northrup" \
+-metadata comment="Created for: Youtube MyLinuxToyBox" \
+-metadata handler_name="ISO Media file produced by Jack Northrup Tue Mar 19 09:03:00 PST 2019" \
+-c:a copy -y JavaScript-Moving-background-Gif-Overlay.mp4
